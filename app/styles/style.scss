@@ -1,0 +1,99 @@
+@import "../blocks/base/fonts.scss";
+@import "../blocks/base/variables.scss";
+@import "../blocks/base/mixins.scss";
+@import "../blocks/base/keyframes.scss";
+@import "../blocks/base/base.scss";
+@import "../blocks/cookies/cookies.scss";
+
+@import "../blocks/phoneImg/phoneImg.scss";
+
+@import "../blocks/textBlock/textBlock.scss";
+
+@import "../blocks/logo/logo.scss";
+
+@import "../blocks/downloadBtn/downloadBtn.scss";
+
+@import "../blocks/headerDownload/headerDownload.scss";
+
+@import "../blocks/contacts/contacts.scss";
+@import "../blocks/block/block.scss";
+
+@import "../blocks/mission/mission.scss";
+
+@import "../blocks/scanner/scanner.scss";
+
+@import "../blocks/circularImg/circularImg.scss";
+
+@import "../blocks/chart/chart.scss";
+
+@import "../blocks/chart2/chart2.scss";
+
+@import "../blocks/chart3/chart3.scss";
+
+.pieChartWrap {
+	&__item {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 1.7em;
+		}
+	}
+}
+
+@import "../blocks/pieChart/pieChart.scss";
+
+@import "../blocks/columnChart/columnChart.scss";
+
+.progressBarWrap {
+	&__item {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 1.6em;
+		}
+	}
+
+	.progressBarWrap__item {
+		&:nth-child(1) {
+			&.animate_active {
+				@include fill(22, #e812af);
+			}
+		}
+
+		&:nth-child(2) {
+			&.animate_active {
+				@include fill(19, #b33fc5);
+			}
+		}
+
+		&:nth-child(3) {
+			&.animate_active {
+				@include fill(13, #7a70dd);
+			}
+		}
+
+		&:nth-child(4) {
+			&.animate_active {
+				@include fill(7, #41a2f5);
+			}
+		}
+	}
+}
+
+@import "../blocks/circularProgressBar/circularProgressBar.scss";
+
+@import "../blocks/integration/integration.scss";
+
+@import "../blocks/code/code.scss";
+
+@import "../blocks/generate/generate.scss";
+
+@import "../blocks/longscroll/longscroll.scss";
+
+@import "../blocks/notab/notab.scss";
+
+@import "../blocks/input/input.scss";
+
+@import "../blocks/form/form.scss";
+
+@import "../blocks/mainDownload/mainDownload.scss";

@@ -1,0 +1,88 @@
+.chart3 {
+	padding: 2.7em 2.4em;
+	position: relative;
+	display: inline-block;
+	background-color: black;
+
+	&__table {
+		border-collapse: collapse;
+		color: white;
+		opacity: 0.4;
+
+		tr {
+			&:last-child {
+				td {
+					border: none;
+					min-height: 2.5em;
+					height: 2.5em;
+					max-height: 2.5em;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		td {
+			min-width: 5em;
+			max-width: 5em;
+			min-height: 3.2em;
+			height: 3.2em;
+			max-height: 3.2em;
+			border: 1px solid #fdfeff;
+			text-align: center;
+			font-size: 0.33em;
+			box-sizing: border-box;
+
+			&:first-child {
+				border: none;
+				transform: translateY(-50%);
+				padding-right: 1.3em;
+				min-width: 2em;
+				max-width: 2em;
+			}
+		}
+	}
+
+	&__lineShadow {
+		width: 13.15em;
+		height: 4.25em;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-47.75%, -47%);
+
+		&_1 {
+			opacity: 0;
+			background: linear-gradient(0deg, #27b7ff 4.45%, #f408ab 125.28%);
+			clip-path: polygon(getTableStepConversion(8, 0, 0) 100%, getTableStepConversion(8, 1, 0) 100%, getTableStepConversion(8, 2, 0) 100%, getTableStepConversion(8, 3, 0) 100%, getTableStepConversion(8, 4, 0) 100%, getTableStepConversion(8, 5, 0) 100%, getTableStepConversion(8, 6, 0) 100%, getTableStepConversion(8, 7, 0) 100%, getTableStepConversion(8, 8, 0) 100%, 100% 100%, 0 100%);
+		}
+
+		&_2 {
+			opacity: 0;
+			background: linear-gradient(0deg, #0055cb -48.95%, #0077ce 1.83%, #0066ff 42.67%, #0066ff 74.12%, #0066ff 92.37%);
+			clip-path: polygon(getTableStepConversion(8, 0, 0) 100%, getTableStepConversion(8, 1, 0) 100%, getTableStepConversion(8, 2, 0) 100%, getTableStepConversion(8, 3, 0) 100%, getTableStepConversion(8, 4, 0) 100%, getTableStepConversion(8, 5, 0) 100%, getTableStepConversion(8, 6, 0) 100%, getTableStepConversion(8, 7, 0) 100%, getTableStepConversion(8, 8, 0) 100%, 100% 100%, 0 100%);
+		}
+	}
+
+	&.animate {
+		opacity: 0;
+
+		&_active {
+			opacity: 1;
+			transition: opacity 1s ease;
+
+			.chart3__lineShadow {
+				&_1 {
+					transition: clip-path 0.9s ease 0.25s, opacity 0.6s ease 0.25s;
+					opacity: 1;
+					clip-path: polygon(getTableStepConversion(8, 0, 0) getTableStepConversion(4, 2, 0), getTableStepConversion(8, 1, 0) getTableStepConversion(4, 1, 0), getTableStepConversion(8, 2, 0) getTableStepConversion(4, 2, 0), getTableStepConversion(8, 3, 0) getTableStepConversion(4, 2, 0), getTableStepConversion(8, 4, 0) getTableStepConversion(4, 0, 0), getTableStepConversion(8, 5, 0) getTableStepConversion(4, 1, 0), getTableStepConversion(8, 6, 0) getTableStepConversion(4, 0, 0), getTableStepConversion(8, 7, 0) getTableStepConversion(4, 0, 0), getTableStepConversion(8, 8, 0) getTableStepConversion(4, 0, 0), 100% 100%, 0 100%);
+				}
+
+				&_2 {
+					transition: clip-path 0.9s ease 0.55s, opacity 0.6s ease 0.55s;
+					opacity: 1;
+					clip-path: polygon(getTableStepConversion(8, 0, 0) getTableStepConversion(4, 3, 0), getTableStepConversion(8, 1, 0) getTableStepConversion(4, 2, 0), getTableStepConversion(8, 2, 0) getTableStepConversion(4, 3, 0), getTableStepConversion(8, 3, 0) getTableStepConversion(4, 1, 0), getTableStepConversion(8, 4, 0) getTableStepConversion(4, 1, 0), getTableStepConversion(8, 5, 0) getTableStepConversion(4, 0, 0), getTableStepConversion(8, 6, 0) getTableStepConversion(4, 2, 0), getTableStepConversion(8, 7, 0) getTableStepConversion(4, 1, 0), getTableStepConversion(8, 8, 0) getTableStepConversion(4, 1, 0), 100% 100%, 0 100%);
+				}
+			}
+		}
+	}
+}

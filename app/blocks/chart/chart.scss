@@ -1,0 +1,211 @@
+.chart {
+	padding: 2.7em 2.4em;
+	position: relative;
+	display: inline-block;
+	background-color: black;
+
+	&__table {
+		border-collapse: collapse;
+		color: white;
+		opacity: 0.6;
+
+		tr {
+			&:first-child {
+				td {
+					border: none;
+				}
+			}
+
+			&:last-child {
+				td {
+					border: none;
+					height: 2.2em;
+
+					&:not(:first-child) {
+						transform: translateX(50%);
+					}
+				}
+			}
+
+			&:nth-child(2n-1) {
+				td {
+					&:first-child {
+						border: none;
+						text-align: right;
+						padding-right: 0.55em;
+					}
+				}
+			}
+		}
+
+		td {
+			min-width: 3.15em;
+			max-width: 3.15em;
+			min-height: 1.1em;
+			height: 1.1em;
+			max-height: 1.1em;
+			border: 1px solid #fdfeff;
+			text-align: center;
+			font-size: 0.54em;
+			box-sizing: border-box;
+		}
+	}
+
+	&__lineShadow {
+		font-size: 0.54em;
+		width: 28.35em;
+		height: 11em;
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0) -14.51%, #ffffff 82.78%);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-44.5%, -40%);
+		clip-path: polygon(0 100%, 11.11% 100%, 22.22% 100%, 33.33% 100%, 44.44% 100%, 55.55% 100%, 66.66% 100%, 77.77% 100%, 88.88% 100%, 100% 100%, 100% 100%, 0 100%);
+	}
+
+	&__line {
+		font-size: 0.54em;
+		width: 28.35em;
+		height: 11em;
+		background: linear-gradient(90deg, #00ead1 0.17%, #00e0d1 10.27%, #00c4cf 27.68%, #0097ce 50.29%, #0058cb 77%, #0055cb 78.4%);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-44.5%, -39%);
+		clip-path: polygon(getTableStepConversion(9, 0, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 1, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 2, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 3, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 4, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 5, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 6, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 7, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 8, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 9, 0) getTableStepConversion(10, 10, -3), getTableStepConversion(9, 9, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 8, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 7, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 6, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 5, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 4, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 3, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 2, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 1, 0) getTableStepConversion(10, 10, 0), getTableStepConversion(9, 0, 0) getTableStepConversion(10, 10, 0));
+	}
+
+	&__dots {
+		font-size: 0.54em;
+		width: 28.35em;
+		height: 11em;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-44.5%, -40%);
+	}
+
+	&__dot {
+		width: 0.9em;
+		height: 0.9em;
+		border-radius: 50%;
+		background-color: #f5f7f6;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 100%;
+
+		&:nth-child(1) {
+			left: getTableStepConversion(9, 0, 0);
+		}
+
+		&:nth-child(2) {
+			left: getTableStepConversion(9, 1, 0);
+		}
+
+		&:nth-child(3) {
+			left: getTableStepConversion(9, 2, 0);
+		}
+
+		&:nth-child(4) {
+			left: getTableStepConversion(9, 3, 0);
+		}
+
+		&:nth-child(5) {
+			left: getTableStepConversion(9, 4, 0);
+		}
+
+		&:nth-child(6) {
+			left: getTableStepConversion(9, 5, 0);
+		}
+
+		&:nth-child(7) {
+			left: getTableStepConversion(9, 6, 0);
+		}
+
+		&:nth-child(8) {
+			left: getTableStepConversion(9, 7, 0);
+		}
+
+		&:nth-child(9) {
+			left: getTableStepConversion(9, 8, 0);
+		}
+
+		&:nth-child(10) {
+			left: getTableStepConversion(9, 9, 0);
+		}
+	}
+
+	&.animate {
+		opacity: 0;
+
+		&_active {
+			opacity: 1;
+			transition: opacity 1s ease;
+
+			.chart__lineShadow {
+				transition: all 1.5s ease 0.5s;
+				clip-path: polygon(getTableStepConversion(9, 0, 0) getTableStepConversion(10, 5, 0), getTableStepConversion(9, 1, 0) getTableStepConversion(10, 4, 0), getTableStepConversion(9, 2, 0) getTableStepConversion(10, 7, 0), getTableStepConversion(9, 3, 0) getTableStepConversion(10, 5, 0), getTableStepConversion(9, 4, 0) getTableStepConversion(10, 5, 0), getTableStepConversion(9, 5, 0) getTableStepConversion(10, 1, 0), getTableStepConversion(9, 6, 0) getTableStepConversion(10, 2, 0), getTableStepConversion(9, 7, 0) getTableStepConversion(10, 0, 0), getTableStepConversion(9, 8, 0) getTableStepConversion(10, 2, 0), getTableStepConversion(9, 9, 0) getTableStepConversion(10, 2, 0), 100% 100%, 0 100%);
+			}
+
+			.chart__line {
+				transition: all 1.5s ease 0.25s;
+				transform: translate(-44.5%, -41%);
+				clip-path: polygon(getTableStepConversion(9, 0, 0) getTableStepConversion(10, 5, 0), getTableStepConversion(9, 1, 0) getTableStepConversion(10, 4, 0), getTableStepConversion(9, 2, 0) getTableStepConversion(10, 7, 0), getTableStepConversion(9, 3, 0) getTableStepConversion(10, 5, 0), getTableStepConversion(9, 4, 0) getTableStepConversion(10, 5, 0), getTableStepConversion(9, 5, 0) getTableStepConversion(10, 1, 0), getTableStepConversion(9, 6, 0) getTableStepConversion(10, 2, 0), getTableStepConversion(9, 7, 0) getTableStepConversion(10, 0, 0), getTableStepConversion(9, 8, 0) getTableStepConversion(10, 2, 0), getTableStepConversion(9, 9, 0) getTableStepConversion(10, 2, 0), getTableStepConversion(9, 9, 0) getTableStepConversion(10, 2, 2), getTableStepConversion(9, 8, 0) getTableStepConversion(10, 2, 2), getTableStepConversion(9, 7, 0) getTableStepConversion(10, 0, 2), getTableStepConversion(9, 6, 0) getTableStepConversion(10, 2, 2), getTableStepConversion(9, 5, 0) getTableStepConversion(10, 1, 2), getTableStepConversion(9, 4, 0) getTableStepConversion(10, 5, 2), getTableStepConversion(9, 3, 0) getTableStepConversion(10, 5, 2), getTableStepConversion(9, 2, 0) getTableStepConversion(10, 7, 2), getTableStepConversion(9, 1, 0) getTableStepConversion(10, 4, 2), getTableStepConversion(9, 0, 0) getTableStepConversion(10, 5, 2));
+			}
+
+			.chart__dot {
+				transition: all 1.5s ease 0.25s;
+
+				&:nth-child(1) {
+					left: getTableStepConversion(9, 0, 0);
+					top: getTableStepConversion(10, 5, 0);
+				}
+
+				&:nth-child(2) {
+					left: getTableStepConversion(9, 1, 0);
+					top: getTableStepConversion(10, 4, 0);
+				}
+
+				&:nth-child(3) {
+					left: getTableStepConversion(9, 2, 0);
+					top: getTableStepConversion(10, 7, 0);
+				}
+
+				&:nth-child(4) {
+					left: getTableStepConversion(9, 3, 0);
+					top: getTableStepConversion(10, 5, 0);
+				}
+
+				&:nth-child(5) {
+					left: getTableStepConversion(9, 4, 0);
+					top: getTableStepConversion(10, 5, 0);
+				}
+
+				&:nth-child(6) {
+					left: getTableStepConversion(9, 5, 0);
+					top: getTableStepConversion(10, 1, 0);
+				}
+
+				&:nth-child(7) {
+					left: getTableStepConversion(9, 6, 0);
+					top: getTableStepConversion(10, 2, 0);
+				}
+
+				&:nth-child(8) {
+					left: getTableStepConversion(9, 7, 0);
+					top: getTableStepConversion(10, 0, 0);
+				}
+
+				&:nth-child(9) {
+					left: getTableStepConversion(9, 8, 0);
+					top: getTableStepConversion(10, 2, 0);
+				}
+
+				&:nth-child(10) {
+					left: getTableStepConversion(9, 9, 0);
+					top: getTableStepConversion(10, 2, 0);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+.block {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 1.3125em;
+	padding: 2.5em 2em;
+
+	@media (min-width: 480px) {
+		padding: getIntermediateValue(2.5, 3.55, 4, 1, 1em) getIntermediateValue(2, 3.05, 4, 1, 1em);
+	}
+
+	@media (min-width: 768px) {
+		padding: getIntermediateValue(2.5, 3.55, 4, 2, 1em) getIntermediateValue(2, 3.05, 4, 2, 1em);
+	}
+
+	@media (min-width: 992px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: getIntermediateValue(2.5, 3.55, 4, 3, 1em) getIntermediateValue(2, 3.05, 4, 3, 1em);
+	}
+
+	@media (min-width: 1200px) {
+		padding: 3.55em 3.05em;
+	}
+
+	&__text {
+		font-size: 1.5em;
+		margin-top: 0;
+		margin-bottom: 1.25em;
+		font-weight: 700;
+
+		@media (min-width: 480px) {
+			font-size: getIntermediateValue(1.5, 1.67, 4, 1, 1em);
+			margin-bottom: getIntermediateValue(1.25, 1.67, 4, 1, 1em);
+		}
+
+		@media (min-width: 768px) {
+			font-size: getIntermediateValue(1.5, 1.67, 4, 2, 1em);
+			margin-bottom: getIntermediateValue(1.25, 1.67, 4, 2, 1em);
+		}
+
+		@media (min-width: 992px) {
+			font-size: getIntermediateValue(1.5, 1.67, 4, 3, 1em);
+			margin-bottom: getIntermediateValue(1.25, 1.67, 4, 3, 1em);
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 1.67em;
+			margin-bottom: 1.67em;
+		}
+	}
+
+	&__link {
+		font-size: 1.125em;
+		color: white;
+		transition: all 0.3s ease;
+		border-left: 1px solid transparent;
+
+		@media (min-width: 480px) {
+			font-size: getIntermediateValue(1.125, 1.33, 4, 1, 1em);
+		}
+
+		@media (min-width: 768px) {
+			font-size: getIntermediateValue(1.125, 1.33, 4, 2, 1em);
+		}
+
+		@media (min-width: 992px) {
+			font-size: getIntermediateValue(1.125, 1.33, 4, 3, 1em);
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 1.33em;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			padding-left: 1em;
+			border-color: white;
+		}
+	}
+}

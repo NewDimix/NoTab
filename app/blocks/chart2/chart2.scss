@@ -1,0 +1,168 @@
+.chart2 {
+	width: 19em;
+	height: 11.7em;
+	position: relative;
+	display: inline-block;
+	background-color: black;
+
+	// 7 вертикаль
+	// 11 горизонталь
+	// $vertical: calc(100% / 7);
+	// $horizontal: calc(100% / 11);
+	// @function getTableStepConversion($x, $n, $px) {
+	// 	@return ($n * calc(100% / $x)) + $px;
+	// }
+	&__lineShadow {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 15em;
+		height: 6.5em;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0) -1.09%, #0198ce 101.36%);
+		clip-path: polygon(getTableStepConversion(11, 0, 0) 100%, getTableStepConversion(11, 1, 0) 100%, getTableStepConversion(11, 2, 0) 100%, getTableStepConversion(11, 3, 0) 100%, getTableStepConversion(11, 4, 0) 100%, getTableStepConversion(11, 5, 0) 100%, getTableStepConversion(11, 6, 0) 100%, getTableStepConversion(11, 7, 0) 100%, getTableStepConversion(11, 8, 0) 100%, getTableStepConversion(11, 9, 0) 100%, getTableStepConversion(11, 10, 0) 100%, getTableStepConversion(11, 11, 0) 100%, 100% 100%, 0 100%);
+	}
+
+	&__line {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -48%);
+		width: 15em;
+		height: 6.5em;
+		background: #ffffff;
+		clip-path: polygon(getTableStepConversion(11, 0, 0) 50%, getTableStepConversion(11, 1, 0) 50%, getTableStepConversion(11, 2, 0) 50%, getTableStepConversion(11, 3, 0) 50%, getTableStepConversion(11, 4, 0) 50%, getTableStepConversion(11, 5, 0) 50%, getTableStepConversion(11, 6, 0) 50%, getTableStepConversion(11, 7, 0) 50%, getTableStepConversion(11, 8, 0) 50%, getTableStepConversion(11, 9, 0) 50%, getTableStepConversion(11, 10, 0) 50%, getTableStepConversion(11, 11, 0) 50%, getTableStepConversion(11, 11, 0) 51%, getTableStepConversion(11, 10, 0) 51%, getTableStepConversion(11, 9, 0) 51%, getTableStepConversion(11, 8, 0) 51%, getTableStepConversion(11, 7, 0) 51%, getTableStepConversion(11, 6, 0) 51%, getTableStepConversion(11, 5, 0) 51%, getTableStepConversion(11, 4, 0) 51%, getTableStepConversion(11, 3, 0) 51%, getTableStepConversion(11, 2, 0) 51%, getTableStepConversion(11, 1, 0) 51%, getTableStepConversion(11, 0, 0) 51%);
+	}
+
+	&__dots {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 15em;
+		height: 6.5em;
+	}
+
+	&__dot {
+		width: 0.6em;
+		height: 0.6em;
+		border-radius: 50%;
+		background-color: #018dce;
+		position: absolute;
+		transform: translate(-50%, -30%);
+		top: 50%;
+
+		&:nth-child(1) {
+			left: getTableStepConversion(11, 1, 0);
+		}
+
+		&:nth-child(2) {
+			left: getTableStepConversion(11, 2, 0);
+		}
+
+		&:nth-child(3) {
+			left: getTableStepConversion(11, 3, 0);
+		}
+
+		&:nth-child(4) {
+			left: getTableStepConversion(11, 4, 0);
+		}
+
+		&:nth-child(5) {
+			left: getTableStepConversion(11, 5, 0);
+		}
+
+		&:nth-child(6) {
+			left: getTableStepConversion(11, 6, 0);
+		}
+
+		&:nth-child(7) {
+			left: getTableStepConversion(11, 7, 0);
+		}
+
+		&:nth-child(8) {
+			left: getTableStepConversion(11, 8, 0);
+		}
+
+		&:nth-child(9) {
+			left: getTableStepConversion(11, 9, 0);
+		}
+
+		&:nth-child(10) {
+			left: getTableStepConversion(11, 10, 0);
+		}
+	}
+
+	&.animate {
+		opacity: 0;
+
+		&_active {
+			opacity: 1;
+			transition: opacity 1s ease;
+
+			.chart2__lineShadow {
+				transition: all 1.5s ease 0.25s;
+				clip-path: polygon(getTableStepConversion(11, 0, 0) getTableStepConversion(7, 1, 0), getTableStepConversion(11, 1, 0) getTableStepConversion(7, 2, 0), getTableStepConversion(11, 2, 0) getTableStepConversion(7, 0, 0), getTableStepConversion(11, 3, 0) getTableStepConversion(7, 4, 0), getTableStepConversion(11, 4, 0) getTableStepConversion(7, 1, 0), getTableStepConversion(11, 5, 0) getTableStepConversion(7, 3, 0), getTableStepConversion(11, 6, 0) getTableStepConversion(7, 2, 0), getTableStepConversion(11, 7, 0) getTableStepConversion(7, 3, 0), getTableStepConversion(11, 8, 0) getTableStepConversion(7, 2, 0), getTableStepConversion(11, 9, 0) getTableStepConversion(7, 5, 0), getTableStepConversion(11, 10, 0) getTableStepConversion(7, 0, 0), getTableStepConversion(11, 11, 0) getTableStepConversion(7, 2, 0), 100% 100%, 0 100%);
+			}
+
+			.chart2__line {
+				transition: all 1.5s ease 0.25s;
+				transform: translate(-50%, -50%);
+				clip-path: polygon(getTableStepConversion(11, 0, 0) getTableStepConversion(7, 1, 0), getTableStepConversion(11, 1, 0) getTableStepConversion(7, 2, 0), getTableStepConversion(11, 2, 0) getTableStepConversion(7, 0, 0), getTableStepConversion(11, 3, 0) getTableStepConversion(7, 4, 0), getTableStepConversion(11, 4, 0) getTableStepConversion(7, 1, 0), getTableStepConversion(11, 5, 0) getTableStepConversion(7, 3, 0), getTableStepConversion(11, 6, 0) getTableStepConversion(7, 2, 0), getTableStepConversion(11, 7, 0) getTableStepConversion(7, 3, 0), getTableStepConversion(11, 8, 0) getTableStepConversion(7, 2, 0), getTableStepConversion(11, 9, 0) getTableStepConversion(7, 5, 0), getTableStepConversion(11, 10, 0) getTableStepConversion(7, 0, 0), getTableStepConversion(11, 11, 0) getTableStepConversion(7, 2, 0), getTableStepConversion(11, 11, 0) getTableStepConversion(7, 2, 3), getTableStepConversion(11, 10, 0) getTableStepConversion(7, 0, 3), getTableStepConversion(11, 9, 0) getTableStepConversion(7, 5, 3), getTableStepConversion(11, 8, 0) getTableStepConversion(7, 2, 3), getTableStepConversion(11, 7, 0) getTableStepConversion(7, 3, 3), getTableStepConversion(11, 6, 0) getTableStepConversion(7, 2, 3), getTableStepConversion(11, 5, 0) getTableStepConversion(7, 3, 3), getTableStepConversion(11, 4, 0) getTableStepConversion(7, 1, 3), getTableStepConversion(11, 3, 0) getTableStepConversion(7, 4, 3), getTableStepConversion(11, 2, 0) getTableStepConversion(7, 0, 3), getTableStepConversion(11, 1, 0) getTableStepConversion(7, 2, 3), getTableStepConversion(11, 0, 0) getTableStepConversion(7, 1, 3));
+			}
+
+			.chart2__dot {
+				transition: all 1.5s ease 0.25s;
+				&:nth-child(1) {
+					left: getTableStepConversion(11, 1, 0);
+					top: getTableStepConversion(7, 2, 0);
+				}
+
+				&:nth-child(2) {
+					left: getTableStepConversion(11, 2, 0);
+					top: getTableStepConversion(7, 0, 0);
+				}
+
+				&:nth-child(3) {
+					left: getTableStepConversion(11, 3, 0);
+					top: getTableStepConversion(7, 4, 0);
+				}
+
+				&:nth-child(4) {
+					left: getTableStepConversion(11, 4, 0);
+					top: getTableStepConversion(7, 1, 0);
+				}
+
+				&:nth-child(5) {
+					left: getTableStepConversion(11, 5, 0);
+					top: getTableStepConversion(7, 3, 0);
+				}
+
+				&:nth-child(6) {
+					left: getTableStepConversion(11, 6, 0);
+					top: getTableStepConversion(7, 2, 0);
+				}
+
+				&:nth-child(7) {
+					left: getTableStepConversion(11, 7, 0);
+					top: getTableStepConversion(7, 3, 0);
+				}
+
+				&:nth-child(8) {
+					left: getTableStepConversion(11, 8, 0);
+					top: getTableStepConversion(7, 2, 0);
+				}
+
+				&:nth-child(9) {
+					left: getTableStepConversion(11, 9, 0);
+					top: getTableStepConversion(7, 5, 0);
+				}
+
+				&:nth-child(10) {
+					left: getTableStepConversion(11, 10, 0);
+					top: getTableStepConversion(7, 0, 0);
+				}
+			}
+		}
+	}
+}

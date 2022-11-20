@@ -1,0 +1,79 @@
+/*
+@mixin example {
+    ...
+}
+
+.selector {
+	@include example;
+}
+*/
+
+@mixin fill($x, $color) {
+	@for $i from 1 to $x {
+		> span:nth-child(#{$i}) {
+			background-color: $color;
+		}
+	}
+}
+
+@mixin rotate($deg) {
+	transform: rotate(#{$deg}deg) translateX(-50%);
+}
+
+@mixin transitionDelay($delay) {
+	transition-delay: #{$delay}s;
+}
+
+@mixin content($i) {
+	&::after {
+		content: "Data 0" + $i;
+	}
+}
+
+@mixin nthChild($x, $mixin) {
+	@for $i from 1 to $x {
+		$deg: $i * -15;
+		$delay: $i * 0.05;
+		&:nth-child(#{$i}) {
+			@if $mixin == "rotate" {
+				@include rotate($deg);
+			}
+			@if $mixin == "delay" {
+				@include transitionDelay($delay);
+			}
+			@if $mixin == "content" {
+				@include content($i);
+			}
+		}
+	}
+}
+
+@mixin heightColumnChart($child, $height1, $height2) {
+	&:nth-child(#{$child}) {
+		.columnChart__path {
+			&:nth-child(1) {
+				&::after {
+					height: $height1;
+				}
+			}
+
+			&:nth-child(2) {
+				&::after {
+					height: $height2;
+				}
+			}
+
+			&::after {
+				transition: all 1.5s ease 0.25s;
+			}
+		}
+	}
+}
+
+@function getTableStepConversion($x, $n, $px) {
+	@return ($n * calc(100% / $x)) + $px;
+}
+
+@function getIntermediateValue($min, $max, $allStep, $step, $unit) {
+	@return (($min + (calc(($max - $min) / $allStep) * $step)) * $unit);
+}

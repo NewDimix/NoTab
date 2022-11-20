@@ -1,0 +1,285 @@
+.integration {
+	@media (min-width: 480px) {
+	}
+
+	@media (min-width: 768px) {
+		display: flex;
+	}
+
+	@media (min-width: 992px) {
+	}
+
+	@media (min-width: 1200px) {
+	}
+
+	&__text {
+		margin-bottom: 1.875em;
+
+		@media (min-width: 480px) {
+		}
+
+		@media (min-width: 768px) {
+			max-width: 50%;
+			margin-bottom: 0;
+		}
+
+		@media (min-width: 992px) {
+			padding-top: 4em;
+		}
+
+		@media (min-width: 1200px) {
+			max-width: 40%;
+			padding-top: 5em;
+		}
+
+		.textBlock__title {
+			&.animate {
+				opacity: 0;
+				transform: translateX(-20%);
+
+				&_active {
+					opacity: 1;
+					transform: translateX(0);
+					transition: transform 1.5s ease, opacity 3s ease;
+				}
+			}
+		}
+
+		.textBlock__text {
+			&.animate {
+				opacity: 0;
+				transform: translateX(-20%);
+
+				&_active {
+					opacity: 1;
+					transform: translateX(0);
+					transition: transform 1.5s ease, opacity 3s ease;
+				}
+			}
+		}
+	}
+
+	&__chartsArea {
+		position: relative;
+		height: 15.3125em;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media (min-width: 480px) {
+			height: getIntermediateValue(15.3125, 29, 4, 1, 1em);
+		}
+
+		@media (min-width: 768px) {
+			height: getIntermediateValue(15.3125, 29, 4, 2, 1em);
+			width: 50%;
+			max-width: 50%;
+		}
+
+		@media (min-width: 992px) {
+			height: getIntermediateValue(15.3125, 29, 4, 3, 1em);
+		}
+
+		@media (min-width: 1200px) {
+			height: 29em;
+			width: 60%;
+			max-width: 60%;
+		}
+	}
+
+	&__circularImg {
+		font-size: 4.7px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 1.5em;
+
+		@media (min-width: 480px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 1, 1px);
+		}
+
+		@media (min-width: 768px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 2, 1px);
+		}
+
+		@media (min-width: 992px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 3, 1px);
+			top: 20em;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 10px;
+			top: 18em;
+			right: 9em;
+		}
+	}
+
+	&__chart {
+		font-size: 5.8px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 1.5em;
+		position: absolute;
+		right: 70%;
+		bottom: 5em;
+
+		@media (min-width: 480px) {
+			font-size: getIntermediateValue(5.8, 10, 4, 1, 1px);
+		}
+
+		@media (min-width: 768px) {
+			font-size: getIntermediateValue(5.8, 10, 4, 2, 1px);
+			right: 40%;
+		}
+
+		@media (min-width: 992px) {
+			font-size: getIntermediateValue(5.8, 10, 4, 3, 1px);
+			bottom: auto;
+			top: 0;
+			right: 45%;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 10px;
+			right: 15em;
+		}
+	}
+
+	&__chart2 {
+		font-size: 4.7px;
+		position: absolute;
+		right: 25%;
+		top: 7.6em;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 1.5em;
+
+		@media (min-width: 480px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 1, 1px);
+		}
+
+		@media (min-width: 768px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 2, 1px);
+			right: 50%;
+		}
+
+		@media (min-width: 992px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 3, 1px);
+			top: 27em;
+			right: 50%;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 10px;
+			top: 30em;
+			right: 26em;
+		}
+	}
+
+	&__chart3 {
+		display: none;
+
+		@media (min-width: 480px) {
+		}
+
+		@media (min-width: 768px) {
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 18em;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+			border-radius: 1.5em;
+			font-size: 10px;
+		}
+
+		@media (min-width: 992px) {
+			top: 3em;
+		}
+
+		@media (min-width: 1200px) {
+			right: auto;
+			left: 0;
+			top: 25em;
+		}
+	}
+
+	&__pieChart {
+		font-size: 4.7px;
+		position: absolute;
+		left: 5%;
+		top: 11.5em;
+
+		@media (min-width: 480px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 1, 1px);
+		}
+
+		@media (min-width: 768px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 2, 1px);
+			top: 1em;
+		}
+
+		@media (min-width: 992px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 3, 1px);
+			top: 19em;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 10px;
+			left: 15em;
+			top: 18em;
+		}
+	}
+
+	&__columnChart {
+		font-size: 4.7px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 1.5em;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 20em;
+
+		@media (min-width: 480px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 1, 1px);
+		}
+
+		@media (min-width: 768px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 2, 1px);
+		}
+
+		@media (min-width: 992px) {
+			font-size: getIntermediateValue(4.7, 10, 4, 3, 1px);
+			top: 35em;
+			transform: translateX(0);
+			left: 0;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 10px;
+			left: 20em;
+			top: 39em;
+		}
+	}
+
+	&__circularProgressBar {
+		font-size: 10px;
+		position: absolute;
+		width: 100%;
+		left: 49%;
+		bottom: 0;
+
+		@media (min-width: 480px) {
+		}
+
+		@media (min-width: 768px) {
+		}
+
+		@media (min-width: 992px) {
+			left: auto;
+			right: 0;
+			width: auto;
+		}
+
+		@media (min-width: 1200px) {
+		}
+	}
+}

@@ -1,0 +1,76 @@
+.columnChart {
+	padding: 2.8em 2em 3.4em;
+	position: relative;
+	display: inline-block;
+	background-color: black;
+
+	&__XY {
+		border-left: 1px solid rgba(255, 255, 255, 0.6);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+		padding-left: 0.55em;
+		padding-right: 0.55em;
+		display: inline-flex;
+	}
+
+	&__item {
+		display: inline-flex;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 1em;
+		}
+
+		&::after {
+			position: absolute;
+			text-transform: uppercase;
+			color: rgba(245, 247, 246, 0.6);
+			font-size: 0.35em;
+			white-space: nowrap;
+			bottom: -1.75em;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		@include nthChild(9, "content");
+	}
+
+	&__path {
+		width: 0.3em;
+		height: 5.7em;
+		background-color: #406eb2;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 0.36em;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background: linear-gradient(0deg, #27b7ff -38.67%, #f408ab 130.69%);
+			height: 0;
+		}
+	}
+
+	&.animate {
+		opacity: 0;
+
+		&_active {
+			opacity: 1;
+			transition: opacity 1s ease;
+
+			.columnChart__item {
+				@include heightColumnChart(1, 70%, 40%);
+				@include heightColumnChart(2, 50%, 60%);
+				@include heightColumnChart(3, 55%, 40%);
+				@include heightColumnChart(4, 45%, 65%);
+				@include heightColumnChart(5, 55%, 40%);
+				@include heightColumnChart(6, 75%, 50%);
+				@include heightColumnChart(7, 45%, 30%);
+				@include heightColumnChart(8, 45%, 65%);
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+.pieChart {
+	border-radius: 50%;
+	width: 4.5em;
+	height: 4.5em;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	background-color: black;
+
+	&__item {
+		width: 4.5em;
+		height: 4.5em;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		&_bg {
+			background-color: #1c2f4d;
+		}
+	}
+
+	&__hidden {
+		overflow: hidden;
+		width: 4.5em;
+		height: 4.5em;
+		background: transparent;
+	}
+
+	&__hiddenSegment {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+		background: #1c2f4d;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #1c2f4d;
+			transform-origin: left;
+			transform: rotate(180deg);
+		}
+	}
+
+	&_1 {
+		.pieChart__item_fill {
+			background: linear-gradient(315deg, #00ead1 -30.27%, #00e0d1 -12.44%, #00c4cf 18.3%, #0097ce 58.22%, #0058cb 105.37%, #0055cb 107.85%);
+			clip-path: polygon(0 0, 50% 0, 50% 50%, 100% 0, 100% 100%, 0 100%);
+		}
+	}
+
+	&_2 {
+		.pieChart__item_fill {
+			background: linear-gradient(315deg, #00ead1 -35.15%, #00e0d1 -18.11%, #00c4cf 11.26%, #0097ce 49.41%, #0058cb 94.46%, #0055cb 96.84%);
+			clip-path: polygon(0 0, 50% 0, 50% 50%, 100% 50%, 100% 100%, 0 100%);
+		}
+	}
+
+	&_3 {
+		.pieChart__item_fill {
+			background: linear-gradient(329.64deg, #00ead1 -46.57%, #00e0d1 -5.17%, #00c4cf 66.19%, #0097ce 158.87%, #0058cb 268.33%, #0055cb 274.1%);
+			clip-path: polygon(0 0, 50% 0, 50% 50%, 0 100%);
+		}
+	}
+
+	&_4 {
+		.pieChart__item_fill {
+			background: linear-gradient(333.43deg, #00ead1 47.96%, #00e0d1 85.32%, #00c4cf 149.71%, #0097ce 233.35%, #0058cb 332.12%, #0055cb 337.33%);
+			clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+		}
+	}
+
+	&.animate {
+		opacity: 0;
+
+		&_active {
+			opacity: 1;
+			transition: opacity 1s ease;
+
+			&.pieChart_1 {
+				.pieChart__hiddenSegment {
+					animation: 1.625s step-end 0s segmentBlue forwards;
+					&::before {
+						animation: 1.625s linear 0s segment-before forwards;
+					}
+				}
+			}
+
+			&.pieChart_2 {
+				.pieChart__hiddenSegment {
+					animation: 1.9s step-end 0s segmentBlue forwards;
+					&::before {
+						animation: 1.9s linear 0s segment-before forwards;
+					}
+				}
+			}
+
+			&.pieChart_3 {
+				.pieChart__hiddenSegment {
+					animation: 3.8s step-end 0s segmentBlue forwards;
+					&::before {
+						animation: 3.8s linear 0s segment-before forwards;
+					}
+				}
+			}
+
+			&.pieChart_4 {
+				.pieChart__hiddenSegment {
+					animation: 2.7s step-end 0s segmentBlue forwards;
+					&::before {
+						animation: 2.7s linear 0s segment-before forwards;
+					}
+				}
+			}
+		}
+	}
+}

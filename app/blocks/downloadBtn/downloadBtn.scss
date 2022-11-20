@@ -1,0 +1,135 @@
+.downloadBtn {
+	border: 1px solid white;
+	border-radius: 8px;
+	text-decoration: none;
+	text-align: left;
+	box-sizing: border-box;
+	white-space: nowrap;
+	transition: all 0.3s ease;
+	display: inline-block;
+
+	&:hover,
+	&:focus {
+		outline: none;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	&_small {
+		padding: 13px 15px;
+		width: 185px;
+
+		.downloadBtn__icon {
+			width: 32px;
+			height: 33px;
+			margin-right: 11px;
+		}
+
+		.downloadBtn__text {
+			font-size: 12px;
+			letter-spacing: 0.05em;
+
+			span {
+				font-size: 19px;
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	&_big {
+		padding: 0.78em 1.28em;
+		width: 11.5625em;
+
+		@media (min-width: 480px) {
+			width: getIntermediateValue(11.5625, 16.22, 4, 1, 1em);
+		}
+
+		@media (min-width: 768px) {
+			width: getIntermediateValue(11.5625, 16.22, 4, 2, 1em);
+		}
+
+		@media (min-width: 992px) {
+			width: getIntermediateValue(11.5625, 16.22, 4, 3, 1em);
+		}
+
+		@media (min-width: 1200px) {
+			width: 16.22em;
+		}
+
+		.downloadBtn__icon {
+			width: 2em;
+			height: 2em;
+			margin-right: 0.6875em;
+
+			@media (min-width: 480px) {
+				width: 2.2em;
+				height: 2.2em;
+				margin-right: 0.7em;
+			}
+
+			@media (min-width: 768px) {
+				width: 2.4em;
+				height: 2.4em;
+				margin-right: 0.8em;
+			}
+
+			@media (min-width: 992px) {
+				width: 2.6em;
+				height: 2.6em;
+				margin-right: 0.9em;
+			}
+
+			@media (min-width: 1200px) {
+				width: 2.78em;
+				height: 2.89em;
+				margin-right: 1em;
+			}
+		}
+
+		.downloadBtn__text {
+			font-size: 0.6em;
+			letter-spacing: 0.05em;
+
+			@media (min-width: 480px) {
+				font-size: getIntermediateValue(0.6, 0.85, 4, 1, 1em);
+			}
+
+			@media (min-width: 768px) {
+				font-size: getIntermediateValue(0.6, 0.85, 4, 2, 1em);
+			}
+
+			@media (min-width: 992px) {
+				font-size: getIntermediateValue(0.6, 0.85, 4, 3, 1em);
+			}
+
+			@media (min-width: 1200px) {
+				font-size: 0.85em;
+			}
+
+			span {
+				font-size: 2em;
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__text {
+		margin-top: 0;
+		margin-bottom: 0;
+		color: white;
+		display: inline-block;
+		vertical-align: middle;
+
+		&_upper {
+			text-transform: uppercase;
+
+			span {
+				text-transform: none;
+			}
+		}
+	}
+}
